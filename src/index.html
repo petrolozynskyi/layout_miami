@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miami</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.scss">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="linthtml">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@900&display=swap" rel="stylesheet"
+    >
     <script src="scripts/main.js" defer></script>
   </head>
-  <body>
-    <h1>Miami</h1>
+  <body class="page__body">
+    <header class="header">
+        <div class="header__nav">
+          <a href="/" class="logo">
+            <img
+              src="/src/images/MyBiKE.svg"
+              alt ="My Bike"
+              class="logo__image"
+            >
+          </a>
+          <div class="header__menu menu">
+            <a href="tel:+1 234 5555-55-55" class="menu__call" data-tel="+1 234 5555-55-55"></a>
+            <a class="menu__opener" href="#"></a>
+          </div>
+        </div>
+        <h1 class="header__title">
+          Take the Streets
+        </h1>
+      </div>
+    </header>
+    <main class="main">
+      <section class="movefree" id="movefree">
+        <h2 class="section-title move">Move free</h2>
+        <h2 class="section-title shift">Shift your ride, not gears. Find the fastest way to move in the city as the bike adapts intuitively to power the speed you need.</h2>
+      </section>
+
+      <section class="compare" id="compare">
+        <h2 class="section-title">Compare Bikes</h2>
+
+        <div class="product-container">
+          <div class="product">
+            <img src="path/to/product-image1.jpg" alt="Product 1">
+            <h3>Sporty 4</h3>
+            <price>Price 1</price>
+          </div>
+          <div class="product">
+            <img src="path/to/product-image2.jpg" alt="Product 2">
+            <h3>Ride in town ST</h3>
+            <price>Price 2</price>
+          </div>
+          <div class="product">
+            <img src="path/to/product-image3.jpg" alt="Product 3">
+            <h3>Agile ride 3</h3>
+            <price>Price 3</price>
+          </div>
+        </div>
+      </section>
+
+      <section class="information" id="information">
+        <h2 class="section-title">The Details</h2>
+      </section>
+      <section class="contatcts" id="contacts">
+        <h2 class="section-title">Contact us</h2>
+      </section>
+    </main>
   </body>
 </html>

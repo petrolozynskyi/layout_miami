@@ -2,6 +2,157 @@
 @import "fonts";
 @import "typography";
 
+
 body {
   background: $c-gray;
+}
+
+.main {
+  background-color: #1D1D1D;
+  background: #1D1D1D;
+}
+
+.movefree {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.move, .shift {
+  display: flex;
+  margin: 120px 120px 120px 120px;
+}
+
+.move {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 64px */
+  letter-spacing: -1.5px;
+  align-self: flex-start; /* Align this item to the top of the container */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+}
+
+.shift {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 32.2px */
+  text-align: left; /* Align the text to the left side */
+}
+
+
+.compare {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: nowrap; /* Prevent products from wrapping to the next row */
+  overflow: hidden; /* Hide any content that overflows the container */
+}
+
+.product {
+  flex: 0 0 calc(33.33% - 24px); /* Calculate the fixed width for each product */
+  padding: 20px;
+}
+
+/* Add additional styling for product images, h3, and price elements if needed */
+.product img {
+  max-width: 100%;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product price {
+  font-weight: bold;
+}
+.container {
+  @media (min-width: 1024px) { // Note the correct syntax for media queries
+    padding: 1000px 400px;
+  }
+}
+
+.page {
+  font-family: "Poppins", sans-serif;
+
+  &__body {
+    margin: 0;
+  }
+}
+
+.section-title {
+  color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 64px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 64px */
+letter-spacing: -1.5px;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  &__opener {
+    display: block;
+    width: 18px;
+    height: 12px;
+    background-image: url(../images/menu.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url(../images/menu_hover.svg);
+    }
+  }
+
+  &__call {
+    display: block;
+    height: 18px;
+    width: 18px;
+    background-image: url(../images/phone.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    text-decoration: none; // Remove underline from the link
+
+    &::before {
+      content: attr(data-tel); // Display the phone number using the data-tel attribute
+      display: none; // Hide the tooltip initially
+      position: absolute;
+      left: -220px; // Adjust this value to position the tooltip to the left of the button
+      top: -5px;
+      padding: 5px;
+      border-radius: 4px;
+      color: white;
+    }
+
+    &:hover::before {
+      display: block; // Show the tooltip on hover
+    }
+  }
+}
+
+.logo {
+  &__image {
+    width: 130px;
+    height: 38px;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
